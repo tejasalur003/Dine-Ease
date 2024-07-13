@@ -1,40 +1,32 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'; // Import Link from React Router
-
 import { GiHamburgerMenu } from "react-icons/gi";
-import { data } from "../restApi.json";
 
 const Navbar = () => {
-  // const [show, setShow] = useState(false);
-  return (
-    <nav>
-      <div className="logo">FOOD-IN</div>      
-      {/* <div className={show ? "navLinks showmenu" : "navLinks"}> */}
-      <div className="navLinks showmenu">
-        <div className="links">
-             <a href="/">HOME</a>
-            <a href="/menu_page">MENU</a>
-            <a href="/about_page">ABOUT US</a>
-            {/* <a href="/service_page">SERVICES</a> */}
-            <a href="/team_page">TEAM</a>
-            <a href="/reservation_page">RESERVATION</a> 
-        </div>
+  const [show, setShow] = useState(false);
 
-        <Link
-          to={"/menu_page"}
-          spy={true}
-          smooth={true}
-          duration={500}
-          className="menuBtn"
-        >
-          OUR MENU
-        </Link>
-        
+  return (
+    <nav className="bg-gradient-to-br from-green-300 to-green-200 p-4 flex items-center justify-between">
+      <div className="text-3xl font-serif font-bold text-black">FOOD-IN</div>
+      
+      <div className={`${show ? "block" : "hidden"} md:flex md:items-center space-x-6`}>
+        <Link to="/" className="text-black text-xl hover:text-white transition duration-300">HOME</Link>
+        <Link to="/menu_page" className="text-black text-xl hover:text-white transition duration-300">MENU</Link>
+        <Link to="/about_page" className="text-black text-xl hover:text-white transition duration-300">ABOUT US</Link>
+        <Link to="/team_page" className="text-black text-xl hover:text-white transition duration-300">TEAM</Link>
+        <Link to="/reservation_page" className="text-black text-xl hover:text-white transition duration-300">RESERVATION</Link>
       </div>
 
-      {/* <div className="hamburger" onClick={() => setShow(!show)}>
-        <GiHamburgerMenu />
-      </div> */}
+      <Link
+        to={"/menu_page"}
+        className="bg-black text-white text-xl px-6 py-3 rounded-md hidden md:block hover:bg-gray-800 transition duration-300"
+      >
+        OUR MENU
+      </Link>
+
+      <div className="md:hidden text-white cursor-pointer" onClick={() => setShow(!show)}>
+        <GiHamburgerMenu size={30} />
+      </div>
     </nav>
   );
 };
