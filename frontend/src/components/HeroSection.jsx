@@ -1,48 +1,19 @@
 import React from "react";
-import { Link } from 'react-router-dom'; // Import Link from React Router
-
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <>
-    {/* <section className="heroSection" id="heroSection">
-      <div className="container">
-        <div className="banner">
-          <div className="largeBox">
-            <h1 className="title">Delicious</h1>
-          </div>
-          <div className="combined_boxes">
-            <div className="imageBox">
-              <img src="/hero1.png" alt="hero1" />
-            </div>
-            <div className="textAndLogo">
-              <div className="textWithSvg">
-                <h1 className="title">Food</h1>
-                <h1 className="title dishes_title">Dishes</h1>
-                <img src="/threelines.svg" alt="three" />
-              </div>
-              <img src="/logo.svg" alt="logo" className="logo" />
-            </div>
-          </div>
-        </div>
-        <div className="banner">
-          <div className="imageBox">
-            <img src="/hero2.png" alt="hero2" />
-          </div>
-          <h1 className="title dishes_title">Dishes</h1>
-        </div>
-      </div>
-    </section> */}
-    <div className="hero-section">
-    <div className="hero-content">
-      <h1>Welcome to Our Restaurant</h1>
-      <p>Enjoy the Finest Dining Experience</p>
-      <Link to="/menu_page">
-          <button>VIEW MENU</button>
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center text-white" 
+    style={{ backgroundImage: 'url(/hero3.jpg)' }}>
+      <div className="absolute inset-0 bg-black opacity-20"></div>
+      <div className="relative text-center p-8 rounded-lg">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Our Restaurant</h1>
+        <p className="text-lg md:text-2xl mb-6">Enjoy the Finest Dining Experience</p>
+        <Link to="/menu_page">
+          <button className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-full transition duration-300">VIEW MENU</button>
         </Link>
+      </div>
     </div>
-  </div>
-  </>
   );
 };
 
