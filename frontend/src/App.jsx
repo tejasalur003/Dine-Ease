@@ -13,6 +13,8 @@ import Menu from "./Pages/Menu_page";
 import Service from "./Pages/service_page";
 import Team from "./Pages/team_page";
 import Reservation from "./Pages/reservation_page";
+import Login from "./components/login";
+import Signup from "./components/signup";
 
 
 const App = () => {
@@ -26,6 +28,9 @@ const App = () => {
         <Route path="/service_page" element={<Service/>} />
         <Route path="/team_page" element={<Team/>} />
         <Route path="/reservation_page" element={<Reservation/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
+      
 
         <Route path="/success" element={<Success />} />
         <Route path="*" element={<NotFound />} />

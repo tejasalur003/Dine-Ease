@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-green-200 to-yellow-100 text-gray-800 py-12">
+    <footer className="bg-gradient-to-r from-green-200 to-yellow-100 text-gray-800 py-12 shadow-inner">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-wrap justify-between items-start">
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
@@ -23,8 +23,8 @@ const Footer = () => {
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
             <div className="flex flex-col space-y-2">
-              <a href="https://instagram.com" className="hover:text-orange-500">Instagram</a>
-              <a href="https://twitter.com" className="hover:text-orange-500">Twitter</a>              
+              <a href="https://instagram.com" className="hover:text-orange-500 transition duration-300">Instagram</a>
+              <a href="https://twitter.com" className="hover:text-orange-500 transition duration-300">Twitter</a>
             </div>
           </div>
         </div>
