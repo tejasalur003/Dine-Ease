@@ -1,3 +1,5 @@
+// dbConnection.js
+
 import mongoose from "mongoose";
 
 export const dbConnection = () => {
@@ -9,6 +11,6 @@ export const dbConnection = () => {
       console.log("Connected to database successfully!");
     })
     .catch((err) => {
-      console.log(`Some error occured while connedting to database! ${err}`);
+      console.log(`Some error occurred while connecting to database! ${err}`);
     });
 };
