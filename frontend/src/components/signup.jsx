@@ -19,7 +19,8 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:8080/api/users";
+			console.log("Befofre: ", data);
+			const url = "http://localhost:4000/api/users";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
 			console.log(res.message);
@@ -85,7 +86,7 @@ const Signup = () => {
 							className="outline-none border-none w-92 p-4 rounded-lg bg-gray-200 mb-4 text-base"
 						/>
 						{error && <div className="w-92 p-4 mb-4 text-base bg-red-500 text-white rounded-md text-center">{error}</div>}
-						<button type="submit" className="bg-teal-500 text-white font-bold py-3 px-8 rounded-full mt-2">
+						<button type="submit" className="bg-teal-500 text-white font-bold py-3 px-8 rounded-full mt-2" onClick={handleSubmit}>
 							Sign Up
 						</button>
 					</form>

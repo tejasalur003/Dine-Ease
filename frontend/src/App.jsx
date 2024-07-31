@@ -15,7 +15,7 @@ import Team from "./Pages/team_page";
 import Reservation from "./Pages/reservation_page";
 import Login from "./components/login";
 import Signup from "./components/signup";
-
+import Testlog from "./components/test";
 
 const App = () => {
   return (
@@ -30,7 +30,8 @@ const App = () => {
         <Route path="/reservation_page" element={<Reservation/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
-      
+
+        <Route path="/test" element={<Testlog/>} />
 
         <Route path="/success" element={<Success />} />
         <Route path="*" element={<NotFound />} />
